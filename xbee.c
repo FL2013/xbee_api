@@ -16,7 +16,7 @@ int xbee_frame(unsigned char *msg, int len,  unsigned char *outBuff){
 	outBuff[4] = 0x01;	//frame ID
 
 	outBuff[5] = 0x00;	//dest adr  00..0FFFF->broadcast
-	outBuff[6] = 0x13;
+	outBuff[6] = 0x13;	//use address of gateway(receiver) avoid frame disapear
 	outBuff[7] = 0xA2;
 	outBuff[8] = 0x00;
 	outBuff[9] = 0x41;
